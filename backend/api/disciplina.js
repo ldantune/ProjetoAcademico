@@ -2,6 +2,8 @@ module.exports = (app) => {
   const { existsOrError, notExistsOrError } = app.api.validation;
 
   const create = (req, res) => {
+    
+    let id;
     const disciplina = {
       cod_disc: req.body.cod_disc,
       qtd_cred: req.body.qtd_cred,
@@ -18,10 +20,10 @@ module.exports = (app) => {
     }
 
     app
-      .db('disciplinas')
-      .insert(disciplina)
-      .then((_) => res.status(204).send())
-      .catch((err) => res.status(500).send(err));
+        .db('disciplinas')
+        .insert(disciplina)
+        .then((_) => res.status(204).send())
+        .catch((err) => res.status(500).send(err));
   };
 
   const update = (req, res) => {
