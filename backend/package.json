@@ -10,7 +10,7 @@
   "author": "Lucas Antunes",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.302.0",
+    "aws-sdk": "^2.814.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "1.18.3",
     "consign": "0.1.6",
